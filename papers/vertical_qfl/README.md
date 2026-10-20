@@ -143,6 +143,7 @@ python papers/vertical_qfl/utils/run_distributions.py --config configs/e1_8clien
 - **Selection and diagnostic sweeps:** the photonic tuning (T1, T2), the photonic diagnostics (D1-D3) and the classical learning-rate selection (C-T).
   - **Rules:** each was declared before its runs. The metric is final-epoch validation accuracy, maximised, as a mean over the seeds, with a tie tolerance of 0.5 points.
   - **Results:** all are COMPLETE SWEEPs. `results/selection_sweeps.md` has the **complete candidate tables**, with JSON copies in `results/sweeps/`. The selections are in `results/photonic_selection.json` and `results/classical_selection.json`.
+- **Independent check:** `python utils/recompute_from_raw.py` recomputes every aggregate, paired difference, verdict and selection rule in this README from the raw `metrics.json` of all 428 runs. It also checks that the headline numbers match across the documents. Result: 0 mismatches (`results/recomputation_check.md`).
 
 ## Fair Baselines
 
